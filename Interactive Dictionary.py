@@ -1,13 +1,7 @@
 class Dictionary():
     def __init__(self):
-        self.dict = {}
-
-
+        self.d = {}
     def newentry(self, word, definition):
-        self.dict[word] = definition
-
+        self.d[word]=definition
     def look(self, key):
-        if key in self.dict:
-            return self.dict[key]
-        else:
-            return "Can't find entry for " + key
+        return self.d.get(key) or "Can't find entry for {}".format(key)
